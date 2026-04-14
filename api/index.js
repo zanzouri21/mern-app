@@ -11,7 +11,7 @@ connectDB();
 app.use(cors());
 app.use("/user", require("./routes/user"));
 app.use("/product", require("./routes/product"));
-
+app.get("/", (req, res) => res.send("Express on Vercel"));
 app.listen(process.env.PORT, (err) =>
   err ? console.log(err) : console.log("server is running"),
 );
